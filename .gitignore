@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+#cfg
+cfg_att.py
+cfg.py
