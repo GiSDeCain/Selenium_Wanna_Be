@@ -105,3 +105,4 @@ venv.bak/
 
 #cfg
 cfg_att.py
+cfg.py
