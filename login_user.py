@@ -8,10 +8,12 @@ user_name = config.get("user", "name")
 passwd = config.get("user", "passwd")
 
 
-def login_user(self):
-    self.wd = WebDriver()
-    wd = self.wd
+def setUp():
+    wd = WebDriver()
     wd.get(forum_url)
+
+
+setUp()
 
 
 __author__ = 'GiSDeCain'
