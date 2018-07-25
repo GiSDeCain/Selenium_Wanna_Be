@@ -24,9 +24,8 @@ def login_user(wd):
     wd.find_element_by_name("login").click()
 
 
-def assert_is_correct_user_logged(wd):
-    element = wd.find_element_by_xpath('//*[@id="username_logged_in"]/div/a/span')
-    assert element.text == config.userName
+def get_logged_username(wd):
+    return wd.find_element_by_id("username_logged_in").text
 
 
 __author__ = 'GiSDeCain'

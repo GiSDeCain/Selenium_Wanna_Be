@@ -5,7 +5,7 @@ def test_login():
     wd = driver()
     open_main_page(wd)
     login_user(wd)
-    assert_is_correct_user_logged(wd)
+    assert get_logged_username(wd) == config.userName
     close_browser(wd)
 
 
