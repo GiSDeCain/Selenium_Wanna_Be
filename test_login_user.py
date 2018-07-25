@@ -1,14 +1,12 @@
 from methods import *
-import pytest
 
-def test_Login():
+
+def test_login():
     wd = driver()
     open_main_page(wd)
     login_user(wd)
+    assert_is_correct_user_logged(wd)
     close_browser(wd)
-
-
-test_Login()
 
 
 __author__ = 'GiSDeCain'

@@ -22,7 +22,10 @@ def login_user(wd):
     wd.find_element_by_id("password").clear()
     wd.find_element_by_id("password").send_keys(config.passwd)
     wd.find_element_by_name("login").click()
-    element = wd.find_element_by_link_text(config.userName)
+
+
+def assert_is_correct_user_logged(wd):
+    element = wd.find_element_by_xpath('//*[@id="username_logged_in"]/div/a/span')
     assert element.text == config.userName
 
 
