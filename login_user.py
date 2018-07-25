@@ -10,8 +10,9 @@ def setup():
     wd.find_element_by_id("password").clear()
     wd.find_element_by_id("password").send_keys(config.passwd)
     wd.find_element_by_name("login").click()
-    element = wd.find_element_by_link_text("Board index")
-    assert element.text == 'Board index'
+    element = wd.find_element_by_link_text(config.userName)
+    assert element.text == config.userName
+    wd.close()
     wd.quit()
 
 
