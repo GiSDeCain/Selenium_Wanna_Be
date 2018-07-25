@@ -1,4 +1,4 @@
-from methods import *
+from fixture.methods import *
 
 
 def test_login():

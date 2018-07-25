@@ -1,5 +1,5 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
-from cfg import config
+from config.cfg import config
 
 
 def driver():
