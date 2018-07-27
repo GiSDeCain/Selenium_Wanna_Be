@@ -15,6 +15,7 @@ def close_browser(wd):
     wd.close()
     wd.quit()
 
+
 def login_user(wd):
     wd.find_element_by_id("username").clear()
     wd.find_element_by_id("username").send_keys(config.userName)
