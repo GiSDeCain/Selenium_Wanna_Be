@@ -2,13 +2,13 @@ from selenium.webdriver.chrome.webdriver import WebDriver
 from config.cfg import config
 
 
-def driver():
-    wd = WebDriver()
-    return wd
-
-
-def open_main_page(wd):
-    wd.get(config.url)
+# def driver():
+#     wd = WebDriver()
+#     return wd
+#
+#
+# def open_main_page(wd):
+#     wd.get(config.url)
 
 
 def close_browser(wd):

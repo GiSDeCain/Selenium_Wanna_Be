@@ -5,7 +5,7 @@ from fixture.app import Application
 @pytest.fixture
 def app(request):
     fixture = Application()
-    #request.addfinlizer(fixture.destroy)
+    request.addfinlizer(fixture.destroy)
     return fixture
 
 # @pytest.fixture
