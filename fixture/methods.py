@@ -7,13 +7,12 @@ def driver():
     return wd
 
 
-def open_main_page(wd):
-    wd.get(config.url)
 
 
 def close_browser(wd):
     wd.close()
     wd.quit()
+
 
 def login_user(wd):
     wd.find_element_by_id("username").clear()
