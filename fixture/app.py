@@ -1,5 +1,5 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
-from fixture.methods import *
+from fixture.methods import Methods
 
 
 class Application:
@@ -7,7 +7,7 @@ class Application:
     def __init__(self, base_url="http://forum.attnauka.webd.pro"):
         self.wd = WebDriver()
         self.base_url = base_url
-        self.methodsHelper = Methods(self)
+        self.methods = Methods(self)
 
     def destroy(self):
         self.wd.close()
