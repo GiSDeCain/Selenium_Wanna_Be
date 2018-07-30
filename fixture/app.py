@@ -6,8 +6,9 @@ class Application:
 
     def __init__(self, base_url="http://forum.attnauka.webd.pro"):
         self.wd = WebDriver()
+        #self.wd.implicitly_wait(10)
         self.base_url = base_url
-        self.methods = Methods()
+        self.methods = Methods(self)
 
     def destroy(self):
         self.wd.close()
