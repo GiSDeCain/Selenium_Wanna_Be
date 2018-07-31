@@ -1,5 +1,8 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
-from fixture.methods import Methods
+from pop.common import Common
+from pop.login_page import LoginPage
+from pop.forum_main_page import MainPage
+from pop.forum_sub_page import SubPage
 
 
 class Application:
@@ -8,7 +11,10 @@ class Application:
         self.wd = WebDriver()
         self.wd.implicitly_wait(5)
         self.base_url = base_url
-        self.methods = Methods(self)
+        self.common = Common(self)
+        self.login_page = LoginPage(self)
+        self.main_page = MainPage(self)
+        self.sub_page = SubPage(self)
 
     def destroy(self):
         self.wd.close()

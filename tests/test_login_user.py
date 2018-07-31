@@ -1,10 +1,10 @@
-from fixture.methods import *
+from pop.login_page import *
 
 
 def test_login(app):
     app.open_home_page()
-    app.methods.login_user()
-    assert app.get_logged_username() == config.userName
+    app.login_page.login_user()
+    assert app.main_page.get_logged_username() == Config.userName
 
 
 __author__ = 'GiSDeCain'
