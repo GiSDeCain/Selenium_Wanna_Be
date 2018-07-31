@@ -1,4 +1,4 @@
-from pop.login_page import *
+from pages.login_page import *
 
 
 def test_login(app):

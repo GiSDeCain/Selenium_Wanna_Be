@@ -1,8 +1,8 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
-from pop.common import Common
-from pop.login_page import LoginPage
-from pop.forum_main_page import MainPage
-from pop.forum_sub_page import SubPage
+from pages.common import Common
+from pages.login_page import LoginPage
+from pages.forum_main_page import MainPage
+from pages.forum_sub_page import SubPage
 
 
 class Application:

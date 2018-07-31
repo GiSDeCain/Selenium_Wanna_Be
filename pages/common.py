@@ -10,9 +10,5 @@ class Common:
         wd.close()
         wd.quit()
 
-    def get_page_title(self):
-        wd = self.app.wd
-        return wd.find_element_by_tag_name("title")
-
 
 __author__ = 'GiSDeCain'
