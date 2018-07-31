@@ -1,6 +1,6 @@
 
 
-SubPage():
+class SubPage:
 
 
 __author__ = 'GiSDeCain'
