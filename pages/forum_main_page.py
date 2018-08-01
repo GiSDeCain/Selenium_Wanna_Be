@@ -7,7 +7,7 @@ class MainPage:
 
     def open_subforum(self):
         wd = self.app.wd
-        wd.find_element_by_link_text('Konrad').click()
+        return wd.find_element_by_link_text('Konrad').click()
 
 
 __author__ = 'GiSDeCain'
