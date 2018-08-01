@@ -1,3 +1,4 @@
+from selenium.common.exceptions import NoSuchElementException
 from config.cfg import Config
 
 
@@ -8,9 +9,11 @@ class MainPage:
 
     def open_subforum(self):
         wd = self.app.wd
-        element = wd.find_element_by_xpath("//a[@class='forumtitle' and text()='%s']" % Config.subforumName)
-        if len(element) > 0:
-            element[0].click()
+        try:
+            element = wd.find_element_by_xpath("//a[@class='forumtitle' and text()='%s']" % Config.subforumName)
+            element.click()
+        except NoSuchElementException:
+            pass
 
 
 __author__ = 'GiSDeCain'
