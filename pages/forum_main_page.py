@@ -1,3 +1,4 @@
+from config.cfg import Config
 
 
 class MainPage:
@@ -7,7 +8,7 @@ class MainPage:
 
     def open_subforum(self):
         wd = self.app.wd
-        return wd.find_element_by_link_text('Konrad').click()
+        wd.find_element_by_xpath("//a[@class='forumtitle' and text()='%s']" % Config.subforumName).click()
 
 
 __author__ = 'GiSDeCain'
