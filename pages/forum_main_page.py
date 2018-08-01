@@ -8,7 +8,12 @@ class MainPage:
 
     def open_subforum(self):
         wd = self.app.wd
-        wd.find_element_by_xpath("//a[@class='forumtitle' and text()='%s']" % Config.subforumName).click()
+        element = wd.find_element_by_xpath("//a[@class='forumtitle' and text()='%s']" % Config.subforumName)
+        try:
+            element
+            element.click()
+        except NoSuchElementException:
+            pass
 
 
 __author__ = 'GiSDeCain'
