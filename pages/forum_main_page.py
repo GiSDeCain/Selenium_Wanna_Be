@@ -13,7 +13,8 @@ class MainPage:
             element = wd.find_element_by_xpath("//a[@class='forumtitle' and text()='%s']" % Config.subforumName)
             element.click()
         except NoSuchElementException:
-            pass
+            print(" Error occured. Navigation element to sub forum not found")
+            return 0
 
 
 __author__ = 'GiSDeCain'
