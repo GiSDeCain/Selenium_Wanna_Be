@@ -1,10 +1,9 @@
-#from pages.login_page import *
 from config.cfg import Config
 
 
-def test_login(app):
+def test_enter_subforum(app):
     app.login_page.login_user(Config.userName, Config.passwd)
-    assert app.common.get_logged_username() == Config.userName
+    app.main_page.open_subforum()
 
 
 __author__ = 'GiSDeCain'

@@ -10,5 +10,9 @@ class Common:
         wd.close()
         wd.quit()
 
+    def get_logged_username(self):
+        wd = self.app.wd
+        return wd.find_element_by_id("username_logged_in").text
+
 
 __author__ = 'GiSDeCain'
