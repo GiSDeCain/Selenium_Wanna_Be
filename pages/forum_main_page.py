@@ -9,8 +9,7 @@ class MainPage:
 
     def open_subforum(self):
         wd = self.app.wd
-       wd.find_element_by_xpath("//a[@class='forumtitle' and text()='%s']" % Config.subforumName).click()
-
+        wd.find_element_by_xpath("//a[@class='forumtitle' and text()='%s']" % Config.subforumName1).click()
 
 
 __author__ = 'GiSDeCain'
